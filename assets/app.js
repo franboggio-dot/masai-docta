@@ -140,6 +140,18 @@
     });
   }
 
+  /* ---------- Tema claro / oscuro ---------- */
+  function initTheme() {
+    const toggle = $("#theme-toggle");
+    if (!toggle) return;
+    toggle.addEventListener("click", function () {
+      const root = document.documentElement;
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("masai_theme", next); } catch (e) {}
+    });
+  }
+
   /* ---------- Header / footer de datos ---------- */
   function renderBusiness() {
     $all("[data-brand-name]").forEach(function (el) { el.textContent = state.business.name; });
@@ -832,6 +844,7 @@
     loadState();
     renderBusiness();
     initNav();
+    initTheme();
     renderMenu();
     initMenuControls();
     renderPromos();
