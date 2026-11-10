@@ -1,0 +1,9 @@
+# Dependencias y herramientas
+node_modules/
+.vercel/
+.DS_Store
+Thumbs.db
+
+# Material fuente (no necesario para el sitio desplegable)
+Skills/
+Imgenes/

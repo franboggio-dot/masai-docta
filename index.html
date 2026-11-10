@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MASAI Café · Resto · Bar — Docta, Córdoba</title>
+  <meta name="description" content="MASAI Café · Resto · Bar en barrio Docta, Córdoba. Carta variada, platos abundantes, café, cerveza y coctelería. Reservá tu mesa, conocé las promos y festejá tu cumpleaños.">
+  <meta property="og:title" content="MASAI Café · Resto · Bar">
+  <meta property="og:description" content="Natural, auténtico y conectado con cada momento del día.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" data-scroll aria-label="MASAI, volver al inicio">
+        <span class="brand-name">MASAI<em>.</em></span>
+        <span class="brand-sub">Café · Resto · Bar</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="#inicio" data-scroll>Inicio</a>
+        <a href="#carta" data-scroll>Carta</a>
+        <a href="#promociones" data-scroll>Promos</a>
+        <a href="#fotos" data-scroll>Fotos</a>
+        <a href="#cumpleanos" data-scroll>Cumpleaños</a>
+        <a href="#eventos" data-scroll>Eventos</a>
+        <a href="#reservar" data-scroll class="nav-cta">Reservá</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ INICIO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">Café · Resto · Bar</span>
+          <h1 class="hero-title"><span data-brand-name>MASAI</span><span class="dot">.</span></h1>
+          <p class="hero-tagline text-wrap" data-tagline>Natural, auténtico y conectado con cada momento del día.</p>
+          <div class="hero-actions">
+            <a href="#carta" class="btn btn-solid" data-scroll>Mirá la carta</a>
+            <a href="#promociones" class="btn btn-outline" data-scroll>Promos</a>
+            <a href="#reservar" class="btn btn-outline" data-scroll>Reservá tu mesa</a>
+            <a href="#cumpleanos" class="btn btn-outline" data-scroll>Festejá tu cumple</a>
+          </div>
+          <div class="hero-sub">
+            <a href="#fotos" data-scroll>Fotos de tu visita →</a>
+            <a href="#eventos" data-scroll>Próximos eventos →</a>
+          </div>
+        </div>
+        <div class="hero-collage" aria-hidden="true">
+          <div class="shot shot-a"><img src="assets/img/foto-01.jpg" alt=""></div>
+          <div class="shot shot-b"><img src="assets/img/foto-03.jpg" alt=""></div>
+          <div class="shot shot-c"><img src="assets/img/foto-05.jpg" alt=""></div>
+          <div class="stamp">Docta · Córdoba</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CARTA ============ -->
+    <section class="section" id="carta">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">La carta</p>
+          <h2 class="section-title">Comé, tomá y quedate.</h2>
+          <p class="section-lede">Carta variada y platos abundantes. Filtrá por categoría o buscá lo que se te antoje.</p>
+        </div>
+      </div>
+
+      <div class="menu-toolbar">
+        <div class="container">
+          <div class="menu-toolbar-inner">
+            <div class="menu-search">
+              <input type="search" id="menu-search" placeholder="Buscar un plato o bebida…" aria-label="Buscar en la carta">
+            </div>
+            <div class="menu-group-tabs" id="menu-group-tabs" role="tablist" aria-label="Comidas o bebidas"></div>
+          </div>
+          <div class="chips" id="menu-filters" role="tablist" aria-label="Categorías de la carta"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="menu-content"></div>
+        <p id="menu-empty" class="empty" style="display:none; margin-top:24px;">No encontramos nada con esa búsqueda. Probá con otra palabra.</p>
+      </div>
+    </section>
+
+    <!-- ============ PROMOCIONES ============ -->
+    <section class="section section-alt" id="promociones">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Promos</p>
+          <h2 class="section-title">Aprovechá las promos.</h2>
+          <p class="section-lede">Días y horarios indicados en cada una. Precios y condiciones claras, sin letra chica.</p>
+        </div>
+        <div class="promos-grid" id="promos-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVAR ============ -->
+    <section class="section section-dark" id="reservar">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Reservá tu mesa</p>
+          <h2 class="section-title">Guardate un lugar.</h2>
+          <p class="section-lede">Completá el formulario y te confirmamos la disponibilidad a la brevedad.</p>
+        </div>
+        <div class="split">
+          <div class="contact-side">
+            <div class="info-note">
+              <p><strong>Tu reserva queda pendiente</strong> hasta que el local te confirme. No damos la mesa por confirmada de forma automática.</p>
+            </div>
+            <div class="info-note">
+              <p>¿Preferís hablar directo? Escribinos o llamanos:</p>
+              <p style="margin-top:10px;">
+                <a class="btn btn-wa" style="margin-bottom:8px;" href="https://wa.me/5493517439039" target="_blank" rel="noopener">WhatsApp: <span data-phone>351 743-9039</span></a>
+                <a class="btn btn-outline" href="tel:+5493517439039">Llamar</a>
+              </p>
+            </div>
+          </div>
+          <div class="form-card">
+            <form id="reserva-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="r-nombre">Nombre</label>
+                  <input type="text" id="r-nombre" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="r-telefono">Teléfono</label>
+                  <input type="tel" id="r-telefono" autocomplete="tel" placeholder="351 000-0000" required>
+                </div>
+                <div class="field">
+                  <label for="r-fecha">Fecha</label>
+                  <input type="date" id="r-fecha" required>
+                </div>
+                <div class="field">
+                  <label for="r-horario">Horario</label>
+                  <input type="time" id="r-horario" required>
+                </div>
+                <div class="field">
+                  <label for="r-cantidad">Cantidad de personas</label>
+                  <input type="number" id="r-cantidad" min="1" max="30" value="2" required>
+                </div>
+                <div class="field full">
+                  <label for="r-comentario">Comentario (opcional)</label>
+                  <textarea id="r-comentario" placeholder="¿Algo que debamos saber?"></textarea>
+                </div>
+              </div>
+              <div style="margin-top:20px;">
+                <button type="submit" class="btn btn-solid" style="width:100%;">Enviar solicitud de reserva</button>
+              </div>
+            </form>
+            <div id="reserva-confirm"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOTOS ============ -->
+    <section class="section" id="fotos">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Fotos de tu visita</p>
+          <h2 class="section-title">Momentos en MASAI.</h2>
+          <p class="section-lede">Compartí una foto de tu visita. Queda pendiente de aprobación y la publicamos con tu consentimiento.</p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid"></div>
+
+        <div class="split" style="margin-top:64px;">
+          <div class="contact-side">
+            <h3 style="font-size:26px; margin-bottom:14px;">Subí tu foto</h3>
+            <ul class="photo-rules">
+              <li>Formatos JPG, PNG o WebP, hasta 5 MB.</li>
+              <li>La imagen se publica en la galería recién cuando la aprobemos.</li>
+              <li>No publicamos datos personales innecesarios ni contenido inapropiado.</li>
+              <li>¿Querés que la retiremos? Escribinos por WhatsApp y la damos de baja.</li>
+            </ul>
+            <p style="margin-top:16px;"><a class="btn btn-outline-dark" href="https://wa.me/5493517439039?text=Hola%2C%20quiero%20pedir%20el%20retiro%20de%20una%20foto%20de%20la%20galer%C3%ADa." target="_blank" rel="noopener">Pedir retiro de una foto</a></p>
+          </div>
+          <div class="form-card">
+            <form id="photo-form" novalidate>
+              <div class="field">
+                <label for="photo-file">Elegí una foto</label>
+                <input type="file" id="photo-file" accept="image/jpeg,image/png,image/webp">
+                <div id="photo-preview"></div>
+              </div>
+              <div class="field" style="margin-top:14px;">
+                <label for="photo-name">Tu nombre o apodo</label>
+                <input type="text" id="photo-name" maxlength="40">
+              </div>
+              <div class="field" style="margin-top:14px;">
+                <label for="photo-comment">Comentario (opcional)</label>
+                <input type="text" id="photo-comment" maxlength="120">
+              </div>
+              <label class="consent" style="margin-top:16px;">
+                <input type="checkbox" id="photo-consent">
+                <span>Acepto que la imagen se publique en la galería de MASAI.</span>
+              </label>
+              <div style="margin-top:20px;">
+                <button type="submit" class="btn btn-solid" id="photo-submit">Subir foto</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CUMPLEAÑOS ============ -->
+    <section class="section section-alt" id="cumpleanos">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Festejá tu cumpleaños</p>
+          <h2 class="section-title">Tu festejo, listo.</h2>
+          <p class="section-lede">Elegí un paquete y consultá disponibilidad. El salón no queda reservado hasta que te confirmemos.</p>
+        </div>
+        <div class="cumple-grid" id="cumple-cards"></div>
+        <p class="empty" id="cumple-note" style="margin-top:18px;"></p>
+
+        <div class="split" style="margin-top:56px;">
+          <div class="contact-side">
+            <div class="info-note">
+              <p><strong>Importante:</strong> completar el formulario no reserva el salón. Te contactamos para confirmar la disponibilidad de la fecha.</p>
+            </div>
+            <div class="info-note">
+              <p>¿Tenés dudas? Escribinos directo:</p>
+              <p style="margin-top:10px;"><a class="btn btn-wa" href="https://wa.me/5493517439039?text=Hola%2C%20quiero%20consultar%20por%20un%20cumplea%C3%B1os%20en%20MASAI." target="_blank" rel="noopener">Consultar por WhatsApp</a></p>
+            </div>
+          </div>
+          <div class="form-card">
+            <form id="cumple-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="c-nombre">Nombre</label>
+                  <input type="text" id="c-nombre" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="c-telefono">Teléfono</label>
+                  <input type="tel" id="c-telefono" autocomplete="tel" required>
+                </div>
+                <div class="field">
+                  <label for="c-fecha">Fecha del festejo</label>
+                  <input type="date" id="c-fecha" required>
+                </div>
+                <div class="field">
+                  <label for="cumple-paquete">Paquete</label>
+                  <select id="cumple-paquete" required></select>
+                </div>
+                <div class="field full">
+                  <label for="c-mensaje">Mensaje (opcional)</label>
+                  <textarea id="c-mensaje" placeholder="Contanos qué tenés en mente…"></textarea>
+                </div>
+              </div>
+              <div style="margin-top:20px;">
+                <button type="submit" class="btn btn-solid" style="width:100%;">Consultar disponibilidad</button>
+              </div>
+            </form>
+            <div id="cumple-confirm"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTOS / CONTACTO ============ -->
+    <section class="section" id="eventos">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Eventos y contacto</p>
+          <h2 class="section-title">Lo que se viene.</h2>
+          <p class="section-lede">Próximos eventos con fecha, hora y descripción.</p>
+        </div>
+        <div class="events-list" id="events-list"></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contacto">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title" style="margin-bottom:24px;">Horarios</h2>
+          <ul class="hours-list" id="hours-list"></ul>
+        </div>
+        <div>
+          <h2 class="section-title" style="margin-bottom:24px;">Encontranos</h2>
+          <p class="contact-zone" data-zone>barrio Docta, Córdoba</p>
+          <p class="contact-zone" data-address>Docta, Córdoba</p>
+          <div class="contact-meta">
+            <a href="tel:+5493517439039" data-phone>351 743-9039</a>
+            <a href="https://wa.me/5493517439039" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-name"><span data-brand-name>MASAI</span><em style="color:var(--gold);font-style:normal;">.</em></span>
+          <p class="footer-tagline" data-tagline>Natural, auténtico y conectado con cada momento del día.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Navegación del pie">
+          <a href="#carta" data-scroll>Carta</a>
+          <a href="#promociones" data-scroll>Promos</a>
+          <a href="#reservar" data-scroll>Reservar</a>
+          <a href="#cumpleanos" data-scroll>Cumpleaños</a>
+          <a href="#fotos" data-scroll>Fotos</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span data-brand-full>MASAI Café · Resto · Bar</span>
+        <a class="footer-admin" href="#admin">Administración</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Imagen ampliada">
+    <img id="lightbox-img" src="" alt="Imagen ampliada">
+  </div>
+
+  <!-- ============ ADMIN ============ -->
+  <div class="admin-overlay" id="admin" aria-hidden="true">
+    <div class="admin-panel">
+      <div class="admin-head">
+        <h3>Administración MASAI</h3>
+        <button class="admin-close" id="admin-close" aria-label="Cerrar administración">✕</button>
+      </div>
+      <div class="admin-tabs" role="tablist">
+        <button class="admin-tab active" data-admin-tab="reservas">Reservas</button>
+        <button class="admin-tab" data-admin-tab="fotos">Fotos</button>
+        <button class="admin-tab" data-admin-tab="carta">Carta</button>
+        <button class="admin-tab" data-admin-tab="datos">Datos y eventos</button>
+      </div>
+      <div class="admin-body">
+        <div class="admin-pane active" id="admin-reservas"></div>
+        <div class="admin-pane" id="admin-fotos"></div>
+        <div class="admin-pane" id="admin-carta">
+          <p class="empty" style="margin-bottom:16px;">Editá nombres, descripciones y precios. Guardá los cambios con el botón de abajo.</p>
+          <div id="admin-menu"></div>
+          <div class="admin-save-row"><button class="btn btn-solid" id="admin-save-menu">Guardar carta</button></div>
+        </div>
+        <div class="admin-pane" id="admin-datos"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

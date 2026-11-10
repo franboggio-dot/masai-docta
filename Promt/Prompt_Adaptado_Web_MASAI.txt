@@ -1,0 +1,269 @@
+PROMPT MAESTRO - SITIO WEB DE MASAI
+Versión adaptada para implementar en Base44
+
+Actúa como diseñador UX/UI y desarrollador full-stack en Base44. Crea un sitio web responsive, completo, en español rioplatense, para MASAI Café · Resto · Bar. Debe funcionar en celular, tablet y escritorio, cargar rápido y facilitar que el visitante consulte la carta, vea promociones, reserve una mesa, comparta fotos de su visita y organice su cumpleaños.
+
+IDENTIDAD Y ESTILO
+- Nombre visible: MASAI Café · Resto · Bar.
+- Frase de marca: “Natural, auténtico y conectado con cada momento del día.”
+- Tono cercano, cálido y directo, con voseo argentino: “Mirá”, “Reservá”, “Festejá”.
+- Diseña una experiencia elegante y acogedora, inspirada en el salón del bar: tonos verde oscuro, crema, negro y acentos cálidos/dorados; fotografía de comida y ambiente como protagonista; tipografía legible y contraste accesible.
+- No inventes dirección, redes, horarios, platos, precios, condiciones comerciales ni servicios. Conserva los datos textuales de este prompt y haz que precios, horarios, promociones y contacto puedan editarse desde una sección de administración.
+
+ESTRUCTURA DEL SITIO
+1. Inicio: marca, frase, foto principal, botones visibles a Carta, Promociones, Reservar y Cumpleaños. Incluir accesos a Fotos de visitantes y Próximos eventos.
+2. Carta: filtros por categoría, fichas de productos con nombre, descripción y precio; diseño legible en móvil; permitir actualizar productos sin rehacer la página. Mostrar claramente productos sin TACC solo en la categoría indicada y no prometer ausencia de contaminación cruzada.
+3. Promociones: publicar las ofertas descritas en este prompt, con días y horarios cuando estén indicados. Mostrar precios y condiciones de manera clara.
+4. Reservá tu mesa: crear un formulario con nombre, teléfono, fecha, horario, cantidad de personas y comentario opcional. Validar campos y permitir enviar una solicitud al negocio. Mostrar que la reserva queda pendiente hasta recibir confirmación; no confirmar disponibilidad automáticamente. Ofrecer alternativa de contacto por teléfono/WhatsApp al 351 743-9039.
+5. Fotos de tu visita: permitir que los clientes carguen fotos tomadas en MASAI, agreguen nombre o apodo y un comentario opcional, y acepten que la imagen se publique en la galería. Guardar las fotos en una colección administrable, mantenerlas pendientes de aprobación antes de hacerlas públicas y ofrecer un canal para pedir su retiro. Limitar formatos y tamaño, mostrar reglas de contenido y no publicar datos personales innecesarios.
+6. Festejá tu cumpleaños: crear una página dedicada con las dos promociones completas para 10 y 20 personas, sus inclusiones y precios. Añadir botón “Consultar disponibilidad” que abra un formulario con nombre, teléfono, fecha, paquete y mensaje. No afirmar que el salón está reservado hasta confirmación del negocio.
+7. Eventos y contacto: sección para próximos eventos con fecha, hora y descripción editables; mostrar zona Docta, Córdoba, teléfono publicado y horarios publicados, con datos editables y nota interna para validar dirección exacta antes de publicarla.
+
+FUNCIONALIDAD Y CONTENIDO
+- Mantén navegación clara, enlaces internos funcionales, botones accesibles, estados de carga y mensajes de éxito/error en formularios.
+- Implementa almacenamiento persistente para solicitudes de reserva y fotos; crea una vista de administración para revisar reservas y aprobar o rechazar imágenes.
+- Si la integración para notificar al negocio no está configurada, deja solicitudes registradas y ofrece un botón de WhatsApp; no simules que se envió una reserva.
+- Conserva los nombres, ingredientes, tamaños y precios tal como aparecen abajo. Los precios usan el símbolo $ en la carta; no agregues una moneda o vigencia que no esté confirmada. Permite editar precios y disponibilidad.
+
+FICHA DEL NEGOCIO
+Nombre: MASAI / MASAI Café · Resto · Bar.
+Rubro: restaurante, café y bar.
+Zona: barrio Docta, Córdoba.
+Teléfono publicado en directorio: 351 743-9039.
+Horarios publicados en directorio: lunes a jueves 08:00-00:00; viernes y sábado 08:00-01:00; domingo 09:00-01:00.
+Descripción externa: carta variada, platos abundantes y cerveza; restaurante, café y bar.
+Dirección a verificar: el directorio comercial indica Manzana 32, lote 15; los afiches de cumpleaños indican Mza. 15, lote 32, local 1. No ocultes esta discrepancia en el panel administrativo y no publiques una dirección exacta hasta que se confirme. Por ahora, mostrar Docta, Córdoba.
+
+CARTA COMPLETA - COMIDAS
+
+PASTAS
+- Sorrentinos de jamón y queso | $18.000
+- Sorrentinos de espinaca | $18.000
+- Sorrentinos de osobuco al Malbec | $19.500
+- Canelones de acelga y carne / acelga | $16.000
+- Ñoquis de papa | $16.000
+
+TABLAS
+- Tabla de Mila para 2 | $24.500 | Milanesa a los tres quesos, cheddar, panceta, napolitana, papas fritas y dips.
+- Tabla Caliente para 2 | $25.500 | Tiraditos de milanesa, pollo crispy, rabas, bastoncitos de muzzarella, papas fritas, nachos, pan de campo y dips.
+- Tabla de Campo para 2 | $20.000 | Jamón crudo y cocido, salame de la Colonia, quesos tybo y azul, olivas, pan de campo y dip.
+- Tabla Caliente | $44.000 | Tiraditos de milanesa, pollo crispy, rabas, bastoncitos de muzzarella, papas fritas, nachos, pan de campo y dips.
+- Tabla de Mila | $42.500 | Milanesa a los tres quesos, cheddar, panceta, napolitana, papas fritas y dips.
+- Tabla de Campo | $36.000 | Jamón crudo y cocido, salame de la Colonia, quesos tybo y azul, olivas, pan de campo y dip.
+
+PIZZAS
+- Rúcula | $26.000 | Muzzarella, rúcula, jamón crudo y parmesano.
+- Media pizza Rúcula | $15.000 | Muzzarella, rúcula, jamón crudo y parmesano.
+- Champignones | $23.500 | Muzzarella, champiñones y pesto.
+- Media pizza Champi | $13.500 | Muzzarella, champiñones y pesto.
+- Caprese | $23.500 | Muzzarella, tomates cherry confitados y pesto.
+- Media pizza Caprese | $13.500 | Muzzarella, tomates cherry confitados y pesto.
+- Cuatro Quesos | $26.000 | Muzzarella, queso azul, parmesano y tybo.
+- Media pizza 4 Quesos | $14.500 | Muzzarella, queso azul, parmesano y tybo.
+- Fugazzetta | $23.500 | Salsa de tomate, muzzarella y cebolla caramelizada.
+- Media pizza Fugazzetta | $13.500 | Salsa de tomate, cebolla caramelizada y muzzarella.
+- Napolitana | $23.500 | Salsa de tomate, muzzarella, tomate en rodajas y provenzal.
+- Media pizza Napolitana | $13.500 | Muzzarella, tomates en rodajas y provenzal.
+- Especial | $23.500 | Jamón cocido, morrones asados, muzzarella y huevo.
+- Media pizza Especial | $13.500 | Jamón cocido, morrones asados, muzzarella y huevo.
+- Muzzarella | $22.000 | Salsa de tomate, muzzarella y orégano.
+- Media pizza Muzzarella | $12.500 | Salsa de tomate, muzzarella y orégano.
+
+PIZZAS SIN TACC
+- Especial sin TACC | $18.000 | Individual, 4 porciones.
+- Muzzarella sin TACC | $17.500 | Individual, 4 porciones.
+
+HAMBURGUESAS
+- Masai | $17.500 | Pan de papa, medallón de carne, rúcula, cebolla caramelizada, queso azul, tomates cherry confitados y toque de sriracha.
+- Americana | $17.500 | Pan de papa, doble medallón, cheddar, panceta, cebolla caramelizada, huevo frito y papas fritas.
+- Clásica | $14.500 | Pan de papa, medallón, lechuga, tomate, cheddar y papas fritas.
+
+SANDWICHES
+- Sandwich Veggie | $19.800 | Berenjenas en láminas, pimientos asados, cebolla caramelizada y muzzarella.
+- Sandwich de Milanesa | $18.500 | Milanesa de ternera, lechuga, tomate, jamón, queso, huevo y papas fritas.
+- Vacío Stout | $23.500 | Pan de masa madre, vacío a la cerveza negra desmenuzado, vegetales asados, mayonesa casera, muzzarella y papas fritas.
+- Lomo Masai | $23.500 | Bife de lomo, mayonesa casera, chimi, lechuga, tomate, jamón, muzzarella, huevo y papas fritas.
+- Lomo | $21.500 | Bife de lomo, lechuga, tomate, jamón, queso, huevo y papas fritas.
+
+WRAPS
+- Mediterráneo | $17.600 | Rúcula, tomates cherry confitados, olivas negras, panceta, parmesano y papas fritas.
+- Vegetariano | $16.500 | Vegetales asados, queso, lechuga, tomate, mayonesa y papas fritas.
+- De Pollo | $17.600 | Pollo rebozado en cubos, vegetales asados, lechuga, tomate, queso, mayonesa y papas fritas.
+
+MINUTAS
+- Milanesa de ternera | $18.500
+- Milanesa de ternera a caballo | $19.500
+- Milanesa de ternera a la napolitana | $19.500
+- Milanesa de pollo | $18.500
+- Milanesa de pollo a caballo | $19.500
+- Milanesa a caballo a la napolitana | $19.500
+
+PRINCIPALES
+- Salmón rosado al vino blanco | $27.500 | Con papas rústicas o ensalada caprese.
+- Bife de pollo grillado | $18.000 | Con papas rústicas o ensalada.
+- Bife de chorizo | $27.500 | 200 g, marinado, con papas o ensalada.
+
+ENTRADAS
+- Tortilla de papa española | $15.000
+- Bastoncitos de muzzarella | $13.500
+- Pollo crispy | $16.500 | Pollo rebozado.
+- Rabas | $24.500 | Calamar a la tempura con aderezo de la casa.
+- Provoleta grillada | $16.500 | Provolone fundido con hongos al ajillo, cherry y miel.
+
+PAPAS
+- Cuatro Quesos | $15.500
+- Papas Masai | $15.500 | Cheddar, panceta y verdeo.
+- Papas Rústicas | $12.500
+
+ENSALADAS
+- Caesar | $17.600 | Pollo, parmesano, hojas verdes, tomates cherry y alioli César.
+- Tibia | $17.600 | Fideos, mix de verdes, verduras asadas, huevo duro y provolone.
+- Masai | $17.600 | Pollo, parmesano, hojas verdes, tomates cherry, croutones y alioli César.
+
+MENÚ INFANTIL
+- Fettuccini con manteca | $13.200
+- Mini burguer con fritas | $13.200
+- Milanesa con fritas | $14.000
+
+COMBOS DE DESAYUNO Y MERIENDA
+- Combo 1 | $9.500 | Dos criollos, medialunas o tostadas con manteca y mermelada casera; infusión y jugo de naranja.
+- Combo 2 | $11.500 | Dos tostadas de pan de campo o integral con jamón, queso y manteca; infusión y jugo de naranja.
+- Combo 3 | $13.500 | Dos Mafaldas, infusión y jugo de naranja.
+- Combo 4 | $15.500 | Licuado de banana, frutilla o durazno y tostado de jamón y queso.
+
+PRODUCTOS INDIVIDUALES
+- Licuado de banana, frutilla o durazno | $6.900
+- Exprimido de naranja | $4.500
+- Mafalda | $3.300
+- Croissant | $2.000
+- Criollo | $1.700
+- Medialuna | $2.000
+
+POSTRES
+- Ensalada de frutas de estación | $7.500
+- Panqueques | $8.500 | Con dulce de leche y helado de crema americana.
+- Peras al Malbec | $8.900 | Con bocha de helado.
+- Brownie casero | $9.500 | Con helado de crema americana.
+- Copa helada | $8.500 | Dos bochas de frutilla, chocolate o crema americana, con salsa.
+- Flan casero | $7.500 | Con dulce de leche.
+
+CARTA COMPLETA - BEBIDAS
+
+SIN ALCOHOL
+- Red Bull en lata | $6.600
+- Speed en lata | $5.500
+- Jugo de naranja, vaso | $4.700
+- Jugo de naranja, jarra | $9.000
+- Limonada, vaso | $4.700
+- Limonada, jarra | $9.000
+- Coca-Cola, Sprite o Fanta, 330 ml | $2.800
+- Coca-Cola, Sprite o Fanta, 500 ml | $4.200
+- Agua tónica en lata | $4.100
+- Agua saborizada | $3.800
+- Agua con gas | $3.800
+- Agua sin gas | $3.800
+
+CERVEZAS INDUSTRIALES
+- Heineken 975 cc | $11.900
+- Stella Artois 330 cc | $5.500
+- Stella Artois 975 cc | $10.900
+- Corona 330 cc | $7.500
+- Corona 710 cc | $10.900
+- Balde de 6 Coronas | $38.500
+
+CERVEZAS ARTESANALES
+- Session IPA | $6.500
+- Amber Lager | $6.500
+- Light Lager | $6.500
+
+VINOS
+- Rutini Cabernet-Malbec | $28.000
+- Salentein Reserva Malbec | $22.000
+- Trumpeter Cabernet Sauvignon | $19.000
+- Las Perdices Malbec | $16.500
+- Copa de vino Las Perdices | $6.500
+
+VINOS BLANCOS
+- Rutini Sauvignon Blanc | $25.000
+- Salentein Chardonnay Reserva | $19.000
+- Trumpeter Torrontés Reserva | $18.000
+
+ESPUMANTES
+- Baron B | $59.000
+- Salentein Blanc de Blancs | $28.000
+- Salentein Extra Brut | $25.900
+- Salentein Brut Nature Rosé | $25.900
+- Salentein Brut Nature | $25.900
+
+WHISKIES
+- J&B | $7.500
+- Johnnie Walker Black | $11.500
+- Johnnie Walker Red | $8.500
+
+CLÁSICOS
+- Daiquiri de frutilla o durazno | $11.000
+- Cuba Libre | $11.000 | Bacardí Carta Oro, Coca-Cola y limón.
+- Negroni | $11.000
+- Vodka con Red Bull | $13.500
+- Vodka con Speed | $9.500
+- Fernet con Coca-Cola | $10.000
+
+COCTELERÍA
+- Jäger Lima | $12.500 | Jägermeister, Sprite y limón.
+- Jäger Julep | $12.500
+- Cynar Julep | $11.000
+- Campari Orange | $11.000
+- Ramazzotti Spritz | $11.500 | Ramazzotti Rosato, espumante, soda y naranja.
+- Ramazzotti Tonic | $10.500 | Ramazzotti Rosato, tónica y limón o pomelo.
+- Vermú Lunfa | $11.500
+- Vermú Ajenjo | $10.500
+- Caipiroska | $10.000
+- Caipi Malibú | $11.000
+- Caipiriña | $10.000
+- Mojito Malibú | $11.000
+- Mojito | $11.000 | Bacardí Carta Blanca, lima, syrup, menta y soda.
+- Gancia Batido | $10.000 | Americano Gancia, limón, syrup y clara de huevo.
+- Aperol Spritz | $11.000
+- Gin tonic Bombay Sapphire | $12.000
+- Gin tonic Beefeater | $10.900
+- Gin tonic Príncipe de los Apóstoles | $9.500
+
+INFUSIONES
+- Submarino | $5.200
+- Cappuccino | $5.000
+- Café frío | $5.000
+- Café a la crema | $4.300
+- Café doble | $3.900
+- Café en jarro | $3.200
+- Café espresso | $2.800
+- Té | $12.800
+
+CAFETERÍA
+- Panqueques de avena | $12.900 | Frutilla, banana y miel.
+- Omelette | $12.900 | Jamón y queso.
+- Tostado mixto | $17.500 | Jamón y queso con papas.
+- Tostada proteica | $17.800 | Dos tostadas integrales o de campo, jamón, queso, huevo y ensalada de frutas.
+- Tostón avocado | $16.000 | Tostada con queso crema, huevo, palta y sésamo.
+
+PROMOCIONES PUBLICADAS
+- Happy hour de 18:00 a 22:00: gin, fernet y cerveza. La pieza no especifica otros días ni condiciones.
+- 2 x 1 en hamburguesas clásicas y wrap de pollo: lunes y martes, 20:00-23:00.
+- Papas Masai + 2 cervezas: $20.000, de 19:00 a 22:00.
+- Promo de botellas: Gin Beefeater + 5 tónicas $76.000; Vodka Absolut + 4 Red Bull $80.000; Vodka Smirnoff + 4 Speed $50.000; Fernet Branca + 2 Coca-Colas $50.000.
+- Happy hour de carta: 2 vasos de gin Príncipe de los Apóstoles $15.000; 2 pintas de cerveza artesanal (Light Lager, Amber Lager o Session IPA) $9.000; 2 vasos de fernet $16.000.
+
+FESTEJÁ TU CUMPLEAÑOS - PAQUETES
+PROMO 1 | 10 personas | $180.000
+- 1 pizza de muzzarella, 1 pizza especial y 1 pizza de rúcula.
+- 4 porciones de papas.
+- 10 pintas o 5 botellas de limonada.
+- Para quien cumple: champagne de regalo para brindar y 10% de descuento en tragos y botellas.
+PROMO 2 | 20 personas | $320.000
+- 2 pizzas de muzzarella, 2 pizzas especiales y 2 pizzas de rúcula.
+- 8 porciones de papas con cheddar y panceta.
+- 20 pintas a elección o 10 botellas de limonada.
+- Para quien cumple: champagne de regalo para brindar y 10% de descuento en tragos y botellas.
+Las piezas promocionales no muestran días de vigencia ni condiciones adicionales de reserva. No inventar condiciones.
+
+INSTRUCCIÓN FINAL
+Construye el sitio completo y revisa que todos los enlaces, botones y formularios funcionen. Antes de darlo por terminado, verifica especialmente que: (a) toda la carta y sus precios aparezcan; (b) las promociones estén visibles; (c) reservar envíe una solicitud sin prometer confirmación automática; (d) la carga de fotos requiera consentimiento y aprobación antes de publicación; y (e) las dos promos de cumpleaños tengan su paquete, precio e inclusiones completos.
